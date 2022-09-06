@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$NUM mm" | tr " " "." | tr "m" "0"
+printf %.2f "$((10**3 * $NUM))e-2"
