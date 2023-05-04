@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Bash scrip
+hour=0
+min=1
+echo "Hour: 0"
+while :
+do
+	if [ $min -eq 60 ]
+	then
+		(( min=1 ))
+		(( hour++ ))
+		echo "Hour: $hour"
+		continue
+	fi
+	echo "$min"
+	if [ $min -eq 59 ] && [ $hour -eq 12 ] 
+	then
+		break
+	fi
+	(( min++ ))
+done
+
